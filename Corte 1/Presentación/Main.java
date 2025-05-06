@@ -62,3 +62,5 @@ public class Main {
         }
     }
 }
+
+//Este codigo realiza suma, resta y multiplicación con una interfaz grafica JOptionpane, puede o no funcionar debido a los permisos del administrador 
