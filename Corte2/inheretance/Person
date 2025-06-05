@@ -1,0 +1,62 @@
+package inheritance;
+
+public class Person {
+    protected String nombre;
+    protected int edad;
+    protected char genero;
+    protected String direccion;
+    
+    public Person(String nombre){
+        this.nombre = nombre;
+    }
+
+     public Person(String nombre, char genero, int edad, String direccion) {
+        this.nombre = nombre;
+        this.genero = genero;
+        this.edad = edad;
+        this.direccion = direccion;
+    }
+    public String obtenerDetalles() {
+        return "Name: %s, Age: %d ".format(this.nombre, this.edad);
+}
+    public String getnombre(){
+        return this.nombre;
+    }
+    public void setnombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public char getgenero(){
+        return this.genero;
+    }
+    public void setgenero(char genero){
+        this.genero = genero;
+    }
+
+    public int getedad(){
+        return this.edad;
+    }
+    public void setedad(int edad){
+        this.edad = edad;
+    }
+
+    public String getdireccion(){
+        return this.direccion;
+    }
+    public void setdireccion(String direccion){
+        this.direccion = direccion;
+    }
+
+    @Override
+
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Person{");
+        sb.append("nombre=").append(nombre);
+        sb.append(", genero=").append(genero);
+        sb.append(", edad=").append(edad);
+        sb.append(", direccion=").append(direccion);
+        sb.append('}');
+        return sb.toString();
+    }
+}
