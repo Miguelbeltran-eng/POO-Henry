@@ -1,0 +1,58 @@
+package inheritance;
+
+import java.util.Date;
+
+public class Cliente extends Person {
+    private int idCliente;
+    private Date fechaRegsitro;
+    private boolean vip;
+    private static int contadorCliente; 
+
+
+    public Cliente(Date fechaRegsitro, boolean vip, String nombre, char genero, int edad, String direccion){
+        super(nombre, genero, edad, direccion);
+        this.idCliente = ++Cliente.contadorCliente;
+        this.fechaRegsitro = fechaRegsitro;
+        this.vip = vip;
+    }
+
+    @Override
+    public String obtenerDetalles(){
+        return super.obtenerDetalles() + "Es VIP: " + this.vip; 
+    }
+
+
+    public int getIdCliente(){
+        return this.idCliente;
+    }
+    public void setIdCliente(int idCliente){
+        this.idCliente = idCliente;
+    }
+
+    public Date getfechaRegistro(){
+        return this.fechaRegsitro;
+    }
+    public void setfechaRegistro(Date fechaRegistro){
+        this.fechaRegsitro = fechaRegistro;
+    }
+
+    public boolean getvip(){
+        return this.vip;
+    }
+    public void setvip(boolean vip){
+        this.vip = vip;
+    }
+
+
+     @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Cliente{idCliente=").append(this.idCliente);
+        sb.append(", fechaRegsitri=").append(this.fechaRegsitro);
+        sb.append(", vip=").append(vip);
+        sb.append(", ").append(super.toString());
+        sb.append('}');
+        return sb.toString();
+    } 
+    
+}
